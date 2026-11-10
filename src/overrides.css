@@ -1,0 +1,52 @@
+/* Cadrage des photos originales d'Annie. */
+.hero-photo img { object-position: center 55%; }
+.portrait-photo img { object-position: center 69%; }
+.site-header .brand-logo { color: #d52f67; font-size: 35px; font-weight: 600; text-shadow: 0 5px 14px #dc4b7833; }
+
+.social-proof { margin: 38px auto 0; padding: 24px; border-radius: 16px; background: #fce9ee; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.social-proof p { margin: 0; font-family: 'Playfair Display'; font-size: 19px; font-style: italic; color: #7e2340; }
+.social-proof > div { display: flex; gap: 10px; flex-wrap: wrap; }
+.social-proof a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border: 1px solid #e6a9ba; border-radius: 28px; color: #a7244b; background: #fff; font-size: 13px; font-weight: 700; transition: transform .25s, box-shadow .25s, background .25s; }
+.social-proof a:hover { transform: translateY(-4px) rotate(-1deg); box-shadow: 0 10px 18px #b82e5540; background: #c43c67; color: #fff; }
+.social-proof svg { width: 18px; }
+
+.lightbox button { color: white; background: transparent; border: 0; cursor: pointer; }
+.lightbox-close { position: absolute; top: 23px; right: 26px; z-index: 2; }
+.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: #fff2 !important; color: #fff; }
+.lightbox-nav:hover { background: #ffffff45 !important; }
+.lightbox-previous { left: clamp(14px, 4vw, 64px); }
+.lightbox-next { right: clamp(14px, 4vw, 64px); }
+.lightbox figcaption small { display: block; font-family: 'DM Sans'; font-size: 11px; font-style: normal; opacity: .75; margin-top: 5px; }
+
+.diploma-showcase { max-width: 850px; margin: 48px auto 0; padding: 26px; border: 1px solid #efc4d0; border-radius: 20px; background: linear-gradient(130deg, #fff7f8, #fce7ed); display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: 30px; }
+.diploma-copy h3 { margin: 0; color: #741936; font-family: 'Playfair Display'; font-size: 29px; }
+.diploma-copy > p:not(.eyebrow) { margin: 11px 0 20px; font-size: 14px; line-height: 1.55; }
+.diploma-open { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 26px; padding: 12px 17px; background: linear-gradient(115deg, #a81f49, #d55276); color: #fff; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; transition: transform .25s, box-shadow .25s; }
+.diploma-open:hover { transform: translateY(-3px); box-shadow: 0 10px 20px #a5284c40; }
+.diploma-slider { display: grid; grid-template-columns: 38px minmax(0, 1fr) 38px; align-items: center; gap: 10px; position: relative; }
+.diploma-slider > button:not(.diploma-preview) { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #e8aabc; border-radius: 50%; background: #fff; color: #af2e52; cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+.diploma-slider > button:not(.diploma-preview):hover { background: #c43c67; color: #fff; transform: scale(1.07); }
+.diploma-preview { display: block; overflow: hidden; aspect-ratio: 1.43; padding: 0; border: 5px solid #fff; border-radius: 9px; background: #fff; box-shadow: 0 10px 22px #8f244128; cursor: zoom-in; }
+.diploma-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .35s; }
+.diploma-preview:hover img { transform: scale(1.035); }
+.diploma-pagination { grid-column: 2; display: flex; align-items: center; justify-content: center; gap: 7px; padding-top: 10px; color: #8d4157; font-size: 11px; font-weight: 700; }
+.diploma-pagination span { margin-right: 4px; }
+.diploma-pagination button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #e9b7c5; cursor: pointer; }
+.diploma-pagination button.active { width: 20px; border-radius: 9px; background: #c43c67; }
+.diploma-lightbox figure { max-width: min(820px, 80vw); }
+.diploma-lightbox img { max-height: 77vh; }
+
+@media (max-width: 680px) {
+  .social-proof { display: block; padding: 20px; margin-top: 28px; }
+  .social-proof p { font-size: 17px; }
+  .social-proof > div { margin-top: 15px; }
+  .social-proof a { flex: 1; justify-content: center; }
+  .lightbox-nav { width: 40px; height: 40px; }
+  .lightbox-close { top: 14px; right: 14px; }
+  .site-header .brand-logo { font-size: 31px; }
+  .diploma-showcase { grid-template-columns: 1fr; gap: 23px; padding: 22px; }
+  .diploma-copy h3 { font-size: 26px; }
+  .diploma-slider { grid-template-columns: 34px minmax(0, 1fr) 34px; }
+  .diploma-slider > button:not(.diploma-preview) { width: 34px; height: 34px; }
+  .diploma-lightbox figure { max-width: 86vw; }
+}
